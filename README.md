@@ -68,8 +68,8 @@ Text can be customized.
 toast type: :custom,
   preferred_height: 100,
   text: {
-    value: "And Peanut Butter", 
-    color: UIColor.brownColor, 
+    value: "And Peanut Butter",
+    color: UIColor.brownColor,
     font:  UIFont.systemFontOfSize(20)
     }
 ```
@@ -88,39 +88,39 @@ toast type: :custom,
 
   under_status_bar             # always keep under the iOS status bar? (boolean)
 
-  keep_navigation_bar_border:  # keep the toast contained with the nav bar? (boolean)
+  keep_navigation_bar_border   # keep the toast contained with the nav bar? (boolean)
 
-  in_animation:                # a Hash for customizing the arrival of the toast.
-    type:                      # :linear, :spring, or :gravity
-    direction:                 # :top, :bottom, :left, or :right
-    time:                      # how long to appear? (float)
+  in_animationn                # a Hash for customizing the arrival of the toast.
+    type                       # :linear, :spring, or :gravity
+    direction                  # :top, :bottom, :left, or :right
+    time                       # how long to appear? (float)
 
-  out_animation:               # a Hash for customizing the departure of the toast.
-    type:                      # :linear, :spring, or :gravity
-    direction:                 # :top, :bottom, :left, or :right
-    time:                      # how long to appear? (float)
+  out_animation                # a Hash for customizing the departure of the toast.
+    type                       # :linear, :spring, or :gravity
+    direction                  # :top, :bottom, :left, or :right
+    time                       # how long to appear? (float)
 
-  spring_damping:              # how much resistance the :spring animations have (float default 0.6)
-  spring_initial_velocity:     # how much initial velocity the :spring animations have (float default 1.0)
-  gravity:                     # how much gravity the :gravity animations have (float default 0.1)
-  
-  text:                        # what the message says (optionally can be a string if not customizations are needed)
-    value:                     # the message
-    color:                     # a UIColor
-    font:                      # a UIFont
-    shadow_color:              # a UIColor
-    shadow_offset:             # a CGSize
-    max_lines:                 # :unlimited or a Fixnum to cap wrapping.
+  spring_damping               # how much resistance the :spring animations have (float default 0.6)
+  spring_initial_velocity      # how much initial velocity the :spring animations have (float default 1.0)
+  gravity                      # how much gravity the :gravity animations have (float default 0.1)
 
-  text:                        # what the subtitle says (optionally can be a string if not customizations are needed)
-    value:                     # the message
-    color:                     # a UIColor
-    font:                      # a UIFont
-    shadow_color:              # a UIColor
-    shadow_offset:             # a CGSize
-    max_lines:                 # :unlimited or a Fixnum to cap wrapping.
+  text                         # what the message says (optionally can be a string if not customizations are needed)
+    value                      # the message
+    color                      # a UIColor
+    font                       # a UIFont
+    shadow_color               # a UIColor
+    shadow_offset              # a CGSize
+    max_lines                  # :unlimited or a Fixnum to cap wrapping.
 
-  background_color:            # UIColor of the background.  Semi-transparent colors look neato.
+  text                         # what the subtitle says (optionally can be a string if not customizations are needed)
+    value                      # the message
+    color                      # a UIColor
+    font                       # a UIFont
+    shadow_color               # a UIColor
+    shadow_offset              # a CGSize
+    max_lines                  # :unlimited or a Fixnum to cap wrapping.
+
+  background_color             # UIColor of the background.  Semi-transparent colors look neato.
 
 ```
 
