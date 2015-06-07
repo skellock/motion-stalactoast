@@ -44,13 +44,13 @@ class AppDelegate
   def toast_somewhat_sane
     toast type: :custom, preferred_height: 100,
       text: {
-        value: "Alright Stop!",
+        value: "Error",
         font: UIFont.boldSystemFontOfSize(22),
         color: UIColor.whiteColor,
         alignment: :left,
       },
       subtitle: {
-        value: "Collaborate and listen.  Ice is back with a brand new invention.",
+        value: "The server blew up.  Yes, it is your fault.  You should be ashamed of yourself.",
         font: UIFont.systemFontOfSize(14),
         color: UIColor.whiteColor,
         alignment: :left,
@@ -60,7 +60,10 @@ class AppDelegate
         alignment: :left,
         content_mode: :center
       },
-      bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9)
+      bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9),
+      in_animation: {type: :gravity},
+      out_animation: {type: :gravity},
+      gravity: 3.0
   end
 
   def toast_nav
