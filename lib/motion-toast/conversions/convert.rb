@@ -10,6 +10,7 @@ module MotionToast::Conversions
     convert_presentation_type origin, destination
     convert_under_status_bar origin, destination
     convert_keep_navigation_bar_border origin, destination
+    convert_animations origin, destination
 
     destination
   end

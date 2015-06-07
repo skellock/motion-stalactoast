@@ -24,8 +24,8 @@ class AppDelegate
 
     unless RUBYMOTION_ENV == "test"
       # toast_hello_world
-      # toast_custom
-      toast_nav
+      toast_custom
+      # toast_nav
     end
 
     true
@@ -45,7 +45,11 @@ class AppDelegate
       type: :custom,
       preferred_height: 300,
       presentation: :cover,
-      under_status_bar: true
+      under_status_bar: true,
+      in_animation: {type: :gravity },
+      out_animation: {type: :spring, time: 1},
+      spring_damping: 0.2,
+      gravity: 4.0
   end
 
 end
