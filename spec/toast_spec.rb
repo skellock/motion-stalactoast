@@ -5,8 +5,29 @@ describe "toast" do
     @object.extend MotionToast
   end
 
-  it "shouldn't require parameters" do
+  after do
+    MotionToast::ToastMaster.new.dismiss_all
+  end
+
+  it "should return a a ToastMaster" do
     @object.toast.class.should == MotionToast::ToastMaster
+  end
+
+  it "should automatically call show" do
+    @object.toast.showing?.should == true
+  end
+
+  it "should defer calling show if asked" do
+    @object.toast("hi", show: false).showing?.should == false
+  end
+
+  it "clears out existing toasts if asked" do
+    t = MotionToast::ToastMaster.new
+    t.showing?.should == false
+    t.show "before"
+    t.showing?.should == true
+    n = @object.toast("override", dismiss: :all, show: false)
+    n.showing?.should == false
   end
 
 end

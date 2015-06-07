@@ -6,6 +6,10 @@ module MotionToast
     def initialize
     end
 
+    def dismiss_all(animated=false)
+      CRToastManager.dismissAllNotifications animated
+    end
+
     # is toast currently showing?
     def showing?
       CRToastManager.manager.showingNotification
