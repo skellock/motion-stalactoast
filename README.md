@@ -51,17 +51,11 @@ toast "And Blueberry Jam", bg_color: UIColor.blueColor
 
 There are 3 types of toasts.
 
-* Status Bar Sized
-* Navigation Bar Sized
-* Custom Sized
-
-
 ```ruby
 toast "Small", type: :status_bar
 toast "Bigger", type: :navigation_bar
 toast "What have you done?", type: :custom, preferred_height: 300
 ```
-
 
 Text can be customized.
 ```ruby
@@ -72,6 +66,14 @@ toast type: :custom,
     color: UIColor.brownColor,
     font:  UIFont.systemFontOfSize(20)
     }
+```
+
+Subtitles are supported just like text.  And styled the same way.
+```ruby
+toast type:     :notification, 
+      bg_color: UIColor.whiteColor,
+      text:     {value: "With Bacon", color: UIColor.brownColor},
+      subtitle: {value: "And Eggs", color: UIColor.yellowColor}
 ```
 
 # Customizable Properties
@@ -135,16 +137,26 @@ toast type: :custom,
     color                      # a UIColor
     font                       # a UIFont
     shadow_color               # a UIColor
-    shadow_offset              # a CGSize
-    max_lines                  # :unlimited or a Fixnum to cap wrapping.
+    shadow_offset              # a CGSize or a float if you're lazy
+    max_lines                  # :unlimited or a fixnum to cap wrapping.
+    alignment                  # how to align the text
+                               #   :left   - <-- that way
+                               #   :right  - --> this way
+                               #   :center - in the middle
+                               #   default is :center
 
   subtitle                     # what the subtitle says (optionally can be a string if not customizations are needed)
     value                      # the message
     color                      # a UIColor
     font                       # a UIFont
     shadow_color               # a UIColor
-    shadow_offset              # a CGSize
-    max_lines                  # :unlimited or a Fixnum to cap wrapping.
+    shadow_offset              # a CGSize or a float if you're lazy
+    max_lines                  # :unlimited or a fixnum to cap wrapping.
+    alignment                  # how to align the text
+                               #   :left   - <-- that way
+                               #   :right  - --> this way
+                               #   :center - in the middle
+                               #   default is :center
 
   background_color             # UIColor of the background.  Semi-transparent colors look neato.
 
