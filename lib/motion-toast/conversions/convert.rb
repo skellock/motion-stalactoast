@@ -9,6 +9,7 @@ module MotionToast::Conversions
     convert_preferred_height origin, destination
     convert_presentation_type origin, destination
     convert_under_status_bar origin, destination
+    convert_keep_navigation_bar_border origin, destination
 
     destination
   end

@@ -24,7 +24,8 @@ class AppDelegate
 
     unless RUBYMOTION_ENV == "test"
       # toast_hello_world
-      toast_custom
+      # toast_custom
+      toast_nav
     end
 
     true
@@ -32,6 +33,11 @@ class AppDelegate
 
   def toast_hello_world
     ToastMaster.new.show "Hello Toasty World!"
+  end
+
+  def toast_nav
+    toast "Nav",
+      type: :nav
   end
 
   def toast_custom
