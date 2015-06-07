@@ -42,7 +42,9 @@ class AppDelegate
   end
 
   def toast_somewhat_sane
-    toast type: :custom, preferred_height: 100,
+    toast type: :custom,
+      preferred_height: 100,
+      duration: 4.0,
       text: {
         value: "Error",
         font: UIFont.boldSystemFontOfSize(22),

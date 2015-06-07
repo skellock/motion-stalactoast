@@ -105,6 +105,9 @@ toast type: :custom,
                                #   :cover - walk over them
                                #   default is :push
 
+  duration                     # How long to display the toast before auto-closing.
+                               #   Float
+
   under_status_bar             # Always keep under the iOS status bar?
                                #   boolean - default false
 
