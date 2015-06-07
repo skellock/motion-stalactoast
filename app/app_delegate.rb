@@ -35,7 +35,7 @@ class AppDelegate
   end
 
   def toast_custom
-    toast "Custom", type: :custom, preferred_height: 300
+    toast "Custom", type: :custom, preferred_height: 300, presentation: :cover
   end
 
 end
