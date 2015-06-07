@@ -10,6 +10,7 @@ class AppDelegate
     rootViewController.view.backgroundColor = UIColor.whiteColor
 
     navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
+    navigationController.navigationBar.barTintColor = UIColor.blueColor
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.rootViewController = navigationController
@@ -41,19 +42,34 @@ class AppDelegate
     toast "Hello Toasty World!"
   end
 
+  def custom_background_view
+    # f = CGRectMake(0, 0, 1000, 1000)
+    # blur_effect = UIBlurEffect.effectWithStyle(UIBlurEffectStyleDark)
+    # blur_view = UIVisualEffectView.alloc.initWithEffect(blur_effect)
+
+    # vibrancy_effect = UIVibrancyEffect.effectForBlurEffect(blur_effect)
+    # vibrancy_view = UIVisualEffectView.alloc.initWithEffect(vibrancy_effect)
+    # blur_view.contentView.addSubview(vibrancy_view)
+    # blur_view
+    UIView.new.tap do |v|
+      v.backgroundColor = UIColor.colorWithRed(150, green:0, blue: 0, alpha: 0.9)
+    end
+  end
+
   def toast_somewhat_sane
     toast type: :custom,
-      preferred_height: 100,
-      duration: 4.0,
+      preferred_height: 110,
+      duration: 5.0,
+      under_status_bar: true,
       text: {
-        value: "Error",
-        font: UIFont.boldSystemFontOfSize(22),
+        value: "We're sorry.  The server is being a jerk.  Please try again later.",
+        font: UIFont.boldSystemFontOfSize(14),
         color: UIColor.whiteColor,
         alignment: :left,
       },
       subtitle: {
-        value: "The server blew up.  Yes, it is your fault.  You should be ashamed of yourself.",
-        font: UIFont.systemFontOfSize(14),
+        value: "\n500 - Server Error",
+        font: UIFont.boldSystemFontOfSize(11),
         color: UIColor.whiteColor,
         alignment: :left,
       },
@@ -62,7 +78,9 @@ class AppDelegate
         alignment: :left,
         content_mode: :center
       },
-      bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9),
+      # bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9),
+      bg_color: UIColor.clearColor,
+      bg_view: custom_background_view,
       in_animation: {type: :gravity},
       out_animation: {type: :gravity},
       gravity: 3.0

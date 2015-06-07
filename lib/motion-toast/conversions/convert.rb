@@ -15,6 +15,7 @@ module MotionToast::Conversions
     convert_background_color origin, destination
     convert_image origin, destination
     convert_duration origin, destination
+    convert_background_view origin, destination
 
     destination
   end
