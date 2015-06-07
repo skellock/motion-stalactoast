@@ -47,11 +47,18 @@ class AppDelegate
         value: "Alright Stop!",
         font: UIFont.boldSystemFontOfSize(22),
         color: UIColor.whiteColor,
+        alignment: :left,
       },
       subtitle: {
         value: "Collaborate and listen.  Ice is back with a brand new invention.",
         font: UIFont.systemFontOfSize(14),
-        color: UIColor.blackColor,
+        color: UIColor.whiteColor,
+        alignment: :left,
+      },
+      image: {
+        value: UIImage.imageNamed("motion-toast-card"),
+        alignment: :left,
+        content_mode: :center
       },
       bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9)
   end

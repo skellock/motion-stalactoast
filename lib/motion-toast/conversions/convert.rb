@@ -13,6 +13,7 @@ module MotionToast::Conversions
     convert_keep_navigation_bar_border origin, destination
     convert_animations origin, destination
     convert_background_color origin, destination
+    convert_image origin, destination
 
     destination
   end

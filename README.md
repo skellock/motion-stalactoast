@@ -70,10 +70,19 @@ toast type: :custom,
 
 Subtitles are supported just like text.  And styled the same way.
 ```ruby
-toast type:     :notification, 
+toast type:     :notification,
       bg_color: UIColor.whiteColor,
       text:     {value: "With Bacon", color: UIColor.brownColor},
       subtitle: {value: "And Eggs", color: UIColor.yellowColor}
+```
+
+You can use an image.
+
+```ruby
+toast type: :custom,
+  preferred_height: 100,
+  image: UIImage.imageNamed("syrup"),
+  text: "Yum."
 ```
 
 # Customizable Properties
@@ -99,7 +108,7 @@ toast type:     :notification,
   under_status_bar             # Always keep under the iOS status bar?
                                #   boolean - default false
 
-  keep_navigation_bar_border   # Keep the toast contained with the nav bar? 
+  keep_navigation_bar_border   # Keep the toast contained with the nav bar?
                                #   boolean - default true
 
   in_animation                 # a Hash for customizing the arrival of the toast.
@@ -159,6 +168,29 @@ toast type:     :notification,
                                #   default is :center
 
   background_color             # UIColor of the background.  Semi-transparent colors look neato.
+
+  image                        # an optional UIImage or Hash
+    value                      #   the UIImage to display
+    alignment                  # how to align the text
+                               #   :left   - <-- that way
+                               #   :right  - --> this way
+                               #   :center - in the middle
+                               #   default is :left
+    content_mode               # a UIViewContentMode type.
+                               #   :scale_to_fill
+                               #   :scale_aspect_fit
+                               #   :scale_aspect_fill
+                               #   :redraw
+                               #   :center
+                               #   :top
+                               #   :bottom
+                               #   :left
+                               #   :right
+                               #   :top_left
+                               #   :top_right
+                               #   :bottom_left
+                               #   :bottom_right
+                               #   default is :center
 
 ```
 
