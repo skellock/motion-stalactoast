@@ -1,0 +1,19 @@
+PODS:
+  - CRToast (0.0.7)
+
+DEPENDENCIES:
+  - CRToast (from `https://github.com/cruffenach/CRToast.git`)
+
+EXTERNAL SOURCES:
+  CRToast:
+    :git: https://github.com/cruffenach/CRToast.git
+
+CHECKOUT OPTIONS:
+  CRToast:
+    :commit: 076a83cb07db500150a495b9e7515b0114d6ec0b
+    :git: https://github.com/cruffenach/CRToast.git
+
+SPEC CHECKSUMS:
+  CRToast: eb22641501990233c53cb8f83f7d2ea87e0ddf73
+
+COCOAPODS: 0.37.2
