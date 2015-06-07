@@ -76,6 +76,8 @@ toast type: :custom,
 
 # Customizable Properties
 
+`toast` can take a Hash as an argument.  Here's what you can do so far.  More is on the way.
+
 ```ruby
 
   type                         # what type of notification to show
@@ -112,7 +114,7 @@ toast type: :custom,
     shadow_offset              # a CGSize
     max_lines                  # :unlimited or a Fixnum to cap wrapping.
 
-  text                         # what the subtitle says (optionally can be a string if not customizations are needed)
+  subtitle                     # what the subtitle says (optionally can be a string if not customizations are needed)
     value                      # the message
     color                      # a UIColor
     font                       # a UIFont
