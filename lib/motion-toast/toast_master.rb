@@ -16,9 +16,12 @@ module MotionToast
     end
 
     # show me the toast!
-    def show(text="", opts={})
+    def show(text=nil, opts={})
       defaults = {text: text}
-      cr_options = convert defaults.merge(opts)
+      o = {}.merge(defaults) 
+      o = o.merge(text) if text.is_a?(Hash)
+      o = o.merge(opts) if opts.is_a?(Hash)
+      cr_options = convert o
       cr_completion_block = lambda do 
       end
       CRToastManager.showNotificationWithOptions(cr_options, completionBlock:cr_completion_block)

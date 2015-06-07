@@ -32,17 +32,28 @@ class AppDelegate
   end
 
   def toast_hello_world
-    ToastMaster.new.show "Hello Toasty World!"
+    toast "Hello Toasty World!"
   end
 
   def toast_nav
-    toast "Nav",
-      type: :nav
+    toast "Nav", type: :nav
   end
 
   def toast_custom
-    toast "Custom",
-      subtitle: "This is customized to the point of being ridiculous.",
+    toast text: {
+        value: "hey",
+        color: UIColor.yellowColor,
+        font: UIFont.systemFontOfSize(20),
+        shadow_offset: 1,
+        shadow_color: UIColor.redColor,
+        alignment: :left,
+      },
+      subtitle: {
+        value: "This is customized to the point of being ridiculous. " * 5,
+        color: UIColor.blueColor,
+        font: UIFont.systemFontOfSize(9),
+        alignment: :right,
+      },
       bg_color: UIColor.greenColor,
       type: :custom,
       preferred_height: 300,
