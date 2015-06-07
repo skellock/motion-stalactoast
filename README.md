@@ -172,6 +172,9 @@ toast type: :custom,
 
   background_color             # UIColor of the background.  Semi-transparent colors look neato.
 
+  background_view              # optional UIView placed behind the images and labels.
+                               #   if you set this, consider setting :bg_color = UIColor.clearColor
+
   image                        # an optional UIImage or Hash
     value                      #   the UIImage to display
     alignment                  # how to align the text
