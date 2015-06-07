@@ -1,9 +1,12 @@
 describe "toast" do
 
-  extend MotionToast
+  before do
+    @object = Object.new
+    @object.extend MotionToast
+  end
 
   it "shouldn't require parameters" do
-    toast.class.should == MotionToast::ToastMaster
+    @object.toast.class.should == MotionToast::ToastMaster
   end
 
 end

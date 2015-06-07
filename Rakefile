@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+require "bundler/gem_tasks"
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
 require './lib/motion-toast'
 
 require 'bundler'
-require 'motion/project/template/gem/gem_tasks'
+# require 'motion/project/template/gem/gem_tasks'
 Bundler.require
 
 Motion::Project::App.setup do |app|

@@ -2,6 +2,8 @@ class AppDelegate
 
   include MotionToast
 
+  attr_accessor :window
+
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     rootViewController = UIViewController.alloc.init
     rootViewController.title = 'motion-toast'
@@ -20,7 +22,15 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
+    unless RUBYMOTION_ENV == "test"
+      toast_hello_world
+    end
+
     true
+  end
+
+  def toast_hello_world
+    ToastMaster.new.show "Hello Toasty World!"
   end
 
 end
