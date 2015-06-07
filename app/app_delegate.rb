@@ -43,6 +43,7 @@ class AppDelegate
   def toast_custom
     toast "Custom",
       subtitle: "This is customized to the point of being ridiculous.",
+      bg_color: UIColor.greenColor,
       type: :custom,
       preferred_height: 300,
       presentation: :cover,

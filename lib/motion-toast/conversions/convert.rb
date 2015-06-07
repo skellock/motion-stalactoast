@@ -12,6 +12,7 @@ module MotionToast::Conversions
     convert_under_status_bar origin, destination
     convert_keep_navigation_bar_border origin, destination
     convert_animations origin, destination
+    convert_background_color origin, destination
 
     destination
   end
