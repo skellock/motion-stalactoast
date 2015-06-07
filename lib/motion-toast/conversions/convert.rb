@@ -5,6 +5,7 @@ module MotionToast::Conversions
     destination = {}
 
     convert_text origin, destination
+    convert_subtitle origin, destination
     convert_type origin, destination
     convert_preferred_height origin, destination
     convert_presentation_type origin, destination
