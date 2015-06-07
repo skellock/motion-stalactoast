@@ -9,30 +9,51 @@ class AppDelegate
     rootViewController.title = 'motion-toast'
     rootViewController.view.backgroundColor = UIColor.whiteColor
 
-    @label = UILabel.alloc.init
-    @label.frame = [[0, 100], [rootViewController.view.bounds.size.width, 300]]
-    @label.textColor = UIColor.blackColor
-    @label.numberOfLines = 0
-
-    rootViewController.view.addSubview @label
-
     navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.rootViewController = navigationController
+
+    @button = UIButton.buttonWithType UIButtonTypeRoundedRect
+    @button.frame = [[200, 200], [200, 300]]
+    @button.setTitle "Toast", forState:UIControlStateNormal
+    @button.addTarget self, action: "go:", forControlEvents:UIControlEventTouchUpInside
+
+    rootViewController.view.addSubview @button
+
     @window.makeKeyAndVisible
 
     unless RUBYMOTION_ENV == "test"
       # toast_hello_world
-      toast_custom
+      # toast_custom
       # toast_nav
+      # toast_somewhat_sane
     end
 
     true
   end
 
+  def go(sender)
+    toast_somewhat_sane
+  end
+
   def toast_hello_world
     toast "Hello Toasty World!"
+  end
+
+  def toast_somewhat_sane
+    toast type: :custom, preferred_height: 100,
+      text: {
+        value: "Alright Stop!",
+        font: UIFont.boldSystemFontOfSize(22),
+        color: UIColor.whiteColor,
+      },
+      subtitle: {
+        value: "Collaborate and listen.  Ice is back with a brand new invention.",
+        font: UIFont.systemFontOfSize(14),
+        color: UIColor.blackColor,
+      },
+      bg_color: UIColor.colorWithRed(188, green: 0, blue: 0, alpha: 0.9)
   end
 
   def toast_nav
