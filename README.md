@@ -80,27 +80,51 @@ toast type: :custom,
 
 ```ruby
 
-  type                         # what type of notification to show
-                               # options are :status_bar, :navigation_bar, :custom
+  type                         # What type of notification to show?
+                               #   :status_bar     - cover the status bar
+                               #   :navigation_bar - cover the navigation bar
+                               #   :custom         - roll your own size
 
-  preferred_height             # when type: :custom, how many points high is the toast?
+  preferred_height             # How many points high is the toast?
+                               #   Fixnum
+                               #   only works with type: :custom
 
-  presentation_type            # what to do with the content the toast overlaps.
-                               # symbol in [:push, :cover]
+  presentation_type            # What to do with overlapping pixels?
+                               #   :push - shove them out of the way
+                               #   :cover - walk over them
+                               #   default is :push
 
-  under_status_bar             # always keep under the iOS status bar? (boolean)
+  under_status_bar             # Always keep under the iOS status bar?
+                               #   boolean - default false
 
-  keep_navigation_bar_border   # keep the toast contained with the nav bar? (boolean)
+  keep_navigation_bar_border   # Keep the toast contained with the nav bar? 
+                               #   boolean - default true
 
-  in_animationn                # a Hash for customizing the arrival of the toast.
-    type                       # :linear, :spring, or :gravity
-    direction                  # :top, :bottom, :left, or :right
-    time                       # how long to appear? (float)
+  in_animation                 # a Hash for customizing the arrival of the toast.
+    type                       # the animation timing style
+                               #   :linear  - constant speed
+                               #   :spring  - bounces like a spring
+                               #   :gravity - behaves like gravity
+    direction                  # the direction the animation comes from
+                               #   :top     - death from above
+                               #   :bottom  - kinda wierd, from below
+                               #   :left    - from the left
+                               #   :right   - from the right
+                               #   default is :top
+    time                       # animation duration (float default 0.3)
 
   out_animation                # a Hash for customizing the departure of the toast.
-    type                       # :linear, :spring, or :gravity
-    direction                  # :top, :bottom, :left, or :right
-    time                       # how long to appear? (float)
+    type                       # the animation timing style
+                               #   :linear  - constant speed
+                               #   :spring  - bounces like a spring
+                               #   :gravity - behaves like gravity
+    direction                  # the direction the animation comes from
+                               #   :top     - leave through the ceiling
+                               #   :bottom  - kinda wierd, sink through the floor
+                               #   :left    - to the left
+                               #   :right   - to the right
+                               #   default is :top
+    time                       # animation duration (float default 0.3)
 
   spring_damping               # how much resistance the :spring animations have (float default 0.6)
   spring_initial_velocity      # how much initial velocity the :spring animations have (float default 1.0)
