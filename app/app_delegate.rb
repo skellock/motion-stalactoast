@@ -52,7 +52,7 @@ class AppDelegate
     # blur_view.contentView.addSubview(vibrancy_view)
     # blur_view
     UIView.new.tap do |v|
-      v.backgroundColor = UIColor.colorWithRed(150, green:0, blue: 0, alpha: 0.9)
+      v.backgroundColor = UIColor.colorWithRed(1.0, green:0, blue: 0, alpha: 0.9)
     end
   end
 
@@ -65,12 +65,14 @@ class AppDelegate
         value: "We're sorry.  The server is being a jerk.  Please try again later.",
         font: UIFont.boldSystemFontOfSize(14),
         color: UIColor.whiteColor,
+        shadow_offset: [0, 1],
+        shadow_color: UIColor.colorWithRed(0.8, green: 0, blue: 0, alpha: 1.0),
         alignment: :left,
       },
       subtitle: {
         value: "\n500 - Server Error",
         font: UIFont.boldSystemFontOfSize(11),
-        color: UIColor.whiteColor,
+        color: UIColor.colorWithRed(1.0, green: 0.8, blue: 0.8, alpha: 1.0),
         alignment: :left,
       },
       image: {
