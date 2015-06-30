@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_keep_navigation_bar_border(origin, destination)
     dk = KCRToastKeepNavigationBarBorderKey

@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_background_view(origin, destination)
     dk = KCRToastBackgroundViewKey

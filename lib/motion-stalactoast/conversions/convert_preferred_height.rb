@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_preferred_height(origin, destination)
     dk = KCRToastNotificationPreferredHeightKey

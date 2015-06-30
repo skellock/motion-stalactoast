@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_animations(origin, destination)
     origin[:in_animation] ||= {}

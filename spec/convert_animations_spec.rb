@@ -2,7 +2,7 @@ describe "Convert Animations" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast::Conversions
+    @object.extend Stalactoast::Conversions
     @d = {}
     @good = {
       in_animation: { type: :spring, direction: :left, time: 0.11 },

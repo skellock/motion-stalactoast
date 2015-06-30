@@ -1,4 +1,4 @@
-module MotionToast
+module Stalactoast
   class ToastMaster
 
     include Conversions

@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_under_status_bar(origin, destination)
     dk = KCRToastUnderStatusBarKey

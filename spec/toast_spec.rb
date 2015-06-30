@@ -2,15 +2,15 @@ describe "toast" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast
+    @object.extend Stalactoast
   end
 
   after do
-    MotionToast::ToastMaster.new.dismiss_all
+    Stalactoast::ToastMaster.new.dismiss_all
   end
 
   it "should return a a ToastMaster" do
-    @object.toast.class.should == MotionToast::ToastMaster
+    @object.toast.class.should == Stalactoast::ToastMaster
   end
 
   it "should automatically call show" do
@@ -22,7 +22,7 @@ describe "toast" do
   end
 
   it "clears out existing toasts if asked" do
-    t = MotionToast::ToastMaster.new
+    t = Stalactoast::ToastMaster.new
     t.showing?.should == false
     t.show "before"
     t.showing?.should == true

@@ -2,7 +2,7 @@ describe "Convert Image" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast::Conversions
+    @object.extend Stalactoast::Conversions
     @image = UIImage.imageNamed("motion-toast-card")
   end
 

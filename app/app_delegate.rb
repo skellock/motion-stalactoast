@@ -1,12 +1,12 @@
 class AppDelegate
 
-  include MotionToast
+  include Stalactoast
 
   attr_accessor :window
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'motion-toast'
+    rootViewController.title = 'motion-stalactoast'
     rootViewController.view.backgroundColor = UIColor.whiteColor
 
     navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)

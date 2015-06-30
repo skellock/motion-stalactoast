@@ -2,7 +2,7 @@ describe "Convert Subtitle" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast::Conversions
+    @object.extend Stalactoast::Conversions
   end
 
   it "sets the right default" do

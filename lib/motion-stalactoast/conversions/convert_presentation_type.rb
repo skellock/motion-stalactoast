@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   def convert_presentation_type(origin, destination)
     dk = KCRToastNotificationPresentationTypeKey

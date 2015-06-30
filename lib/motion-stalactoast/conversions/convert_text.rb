@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   MOTION_TOAST_DEFAULT_FONT = UIFont.systemFontOfSize(12)
   MOTION_TOAST_DEFAULT_COLOR = UIColor.whiteColor

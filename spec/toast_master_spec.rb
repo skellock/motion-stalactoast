@@ -1,7 +1,7 @@
 describe "ToastMaster" do
 
   before do
-    @tm = MotionToast::ToastMaster.new
+    @tm = Stalactoast::ToastMaster.new
   end
 
   after do

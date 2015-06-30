@@ -1,10 +1,10 @@
-# motion-toast
-[![Gem Version](https://img.shields.io/gem/v/motion-toast.svg?style=flat)](https://rubygems.org/gems/motion-toast)
-[![Build Status](https://img.shields.io/travis/skellock/motion-toast.svg?style=flat)](https://travis-ci.org/skellock/motion-toast)
+# motion-stalactoast
+[![Gem Version](https://img.shields.io/gem/v/motion-stalactoast.svg?style=flat)](https://rubygems.org/gems/motion-stalactoast)
+[![Build Status](https://img.shields.io/travis/skellock/motion-stalactoast.svg?style=flat)](https://travis-ci.org/skellock/motion-stalactoast)
 
-A RubyMotion library for iOS 7+ to display Toast-like notification messages.
+A RubyMotion library for iOS 7+ to display toast-like notification messages.
 
-The heavy lifting is provided by CRToast.  It's pretty awesome.  motion-toast is just a warm RubyMotion hug for it.
+The heavy lifting is provided by CRToast.  It's pretty awesome.  motion-stalactoast is just a warm RubyMotion hug for it.
 
 https://github.com/cruffenach/CRToast
 
@@ -16,7 +16,7 @@ https://github.com/cruffenach/CRToast
 Add this to your Gemfile:
 
 ```ruby
-gem 'motion-toast'
+gem 'motion-stalactoast'
 ```
 
 Then run this to install it:
@@ -32,10 +32,10 @@ bundle
 
 # Usage
 
-Include the MotionToast module in your file.  We're non-polluting by default.
+Include the Stalactoast module in your file.  We're non-polluting by default.
 
 ```ruby
-include MotionToast
+include Stalactoast
 ```
 
 Simple and unstyled.
@@ -49,7 +49,7 @@ toast "And Blueberry Jam", bg_color: UIColor.blueColor
 
 ```
 
-There are 3 types of toasts.
+There are 3 sizes of toasts.
 
 ```ruby
 toast "Small", type: :status_bar
@@ -203,7 +203,7 @@ toast type: :custom,
 # Wierd Things
 
 * So not all combinations of options work with each other.  CRToast might throw some warnings in your console to reward your conflicting choices.  No big deal.
-* motion-toast uses the Pod CRToast but links it from Github on the master branch.  Never do this at home.  I'll fix.
+* motion-stalactoast uses the Pod CRToast but links it from Github on the master branch.  Never do this at home.  I'll fix.
 
 # HISTORY
 

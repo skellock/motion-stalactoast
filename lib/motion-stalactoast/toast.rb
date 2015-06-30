@@ -1,4 +1,4 @@
-module MotionToast
+module Stalactoast
 
   # make a ToastMaster
   def toast(text="", options={})

@@ -2,7 +2,7 @@ describe "Convert Background View" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast::Conversions
+    @object.extend Stalactoast::Conversions
     @v = UIView.alloc.init
   end
 

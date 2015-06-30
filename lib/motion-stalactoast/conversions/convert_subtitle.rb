@@ -1,0 +1,3 @@
+module Stalactoast::Conversions
+
+end

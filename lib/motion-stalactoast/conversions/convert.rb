@@ -1,4 +1,4 @@
-module MotionToast::Conversions
+module Stalactoast::Conversions
 
   # convert all our dsl options to what CRToast expects
   def convert(origin={})

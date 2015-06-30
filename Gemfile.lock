@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    motion-toast (0.1.0)
+    motion-stalactoast (0.1.0)
       motion-cocoapods (~> 1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.1)
+    activesupport (4.2.2)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -42,7 +42,7 @@ GEM
     escape (0.0.4)
     fuzzy_match (2.0.4)
     i18n (0.7.0)
-    json (1.8.2)
+    json (1.8.3)
     minitest (5.7.0)
     molinillo (0.2.3)
     motion-cocoapods (1.7.1)
@@ -61,5 +61,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  motion-toast!
+  motion-stalactoast!
   rake (~> 10)

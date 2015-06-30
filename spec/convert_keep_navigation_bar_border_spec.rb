@@ -2,7 +2,7 @@ describe "Convert Keep Navigation Bar Border" do
 
   before do
     @object = Object.new
-    @object.extend MotionToast::Conversions
+    @object.extend Stalactoast::Conversions
   end
 
   it "sets the appropriate CRToast key" do
