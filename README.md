@@ -207,7 +207,7 @@ toast type: :custom,
 
 # HISTORY
 
-### 0.1.0 | June 6th, 2015
+### 0.1.0 | June 29th, 2015
 * [feature] first release
 
 
